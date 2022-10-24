@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://flackr.github.io/scroll-timeline/dist/scroll/scroll-timeline.js");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(#2b1055, #7597de);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+}
+nav h2 {
+  color: white;
+}
+nav .navbar-links ul {
+  display: flex;
+  list-style: none;
+}
+nav .navbar-links li a {
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+  display: block;
+}
+nav li a:hover {
+  background-color: white;
+  color: #2b1055;
+  border-radius: 15px;
+}
+nav .menu {
+  flex-direction: column;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: none;
+}
+nav .menu .bars {
+  padding: 3px 15px;
+  background-color: white;
+  margin: 3px;
+  transition: 0.5s ease-in-out;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section .moon {
+  mix-blend-mode: screen;
+}
+section .mountains-front {
+  z-index: 10;
+}
+section #text {
+  position: absolute;
+  color: white;
+  white-space: nowrap;
+  font-size: 7.5vw;
+  z-index: 9;
+  right: -350px;
+}
+section #btn {
+  text-decoration: none;
+  color: white;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background-color: white;
+  color: #2b1055;
+  font-size: 1.5em;
+  display: inline-block;
+  z-index: 9;
+  transform: translateY(100px);
+}
+
+.sec {
+  position: relative;
+  padding: 100px;
+  background-color: #1c0522;
+  color: white;
+}
+.sec h2 {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav h2 {
+    z-index: 1;
+  }
+  nav .menu {
+    display: flex;
+  }
+  nav .menu.active .bars:nth-child(2) {
+    opacity: 0;
+  }
+  nav .menu.active .bars:nth-child(1) {
+    transform: translateY(12px) rotate(45deg);
+  }
+  nav .menu.active .bars:nth-child(3) {
+    transform: translateY(-12px) rotate(-45deg);
+  }
+  nav .navbar-links {
+    width: 100%;
+    display: none;
+    height: 100vh;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  nav .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+    padding-top: 10rem;
+  }
+  nav .navbar-links li a {
+    text-align: center;
+  }
+  nav .navbar-links.active {
+    display: flex;
+  }
+  .sec {
+    padding: 1rem;
+    text-align: justify;
+  }
+  .sec h2 {
+    text-align: center;
+  }
+}/*# sourceMappingURL=style.css.map */
